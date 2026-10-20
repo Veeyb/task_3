@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Pendaftaran</title>
+    <style>
+        /* Selector Tag & Layout Flexbox */
+        body { 
+            display: flex; 
+            justify-content: center; 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f9; 
+            padding: 40px;
+        }
+        
+        /* Selector Class & Desain Box */
+        .box-container { 
+            border: 2px solid #DCA806; 
+            border-radius: 8px; 
+            padding: 20px; 
+            background-color: white;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Selector Atribut & Desain Form */
+        input[type="text"], select { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 8px 0 16px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] { 
+            background-color: #DCA806; 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 4px;
+            cursor: pointer; 
+            width: 100%;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b88a04;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <h2>Form Pendaftaran Web</h2>
+        <!-- Form menggunakan method GET,detail diarahkan ke halaman detail -->
+        <form method="GET" action="detail.html">
+            <label>Nama Lengkap:</label>
+            <input type="text" name="nama" placeholder="Masukkan nama" required>
+            
+            <label>NIM:</label>
+            <input type="text" name="nim" placeholder="Masukkan NIM" required>
+            
+            <label>Kelas:</label>
+            <select name="kelas">
+                <option value="RA">RA</option>
+                <option value="RB">RB</option>
+                <option value="RC">RC</option>
+            </select>
+            
+            <input type="submit" value="Daftar Sekarang">
+        </form>
+    </div>
+</body>
+</html>
